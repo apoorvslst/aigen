@@ -13,7 +13,7 @@ function App() {
 
   const handleGenerate = async () => {
   try {
-    const res = await fetch(`https://your-deployed-cors-proxy.vercel.app/https://api.freepik.com/v1/ai/text-to-image`, {
+    const res = await fetch(`https://cors-anywhere.herokuapp.com/https://api.freepik.com/v1/ai/text-to-image`, {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -25,6 +25,7 @@ function App() {
     image: { size: "square_0.5_0.5" }
   })
 });
+
 
     if (!res.ok) {
       console.error("API error:", res.status, res.statusText);
