@@ -1,0 +1,63 @@
+.img-cont {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.del-btn{
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.down-btn {
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.del-btn {
+  top: 50%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+}
+
+.down-btn {
+  top: 50%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+}
+
+.img-cont:hover .del-btn,
+.img-cont:hover .down-btn {
+  opacity: 1;
+  display: block;
+}
+
+.img-cont:hover .img {
+  opacity: 0.4;
+}
