@@ -13,7 +13,7 @@ function App() {
 
   const handleGenerate = async () => {
   try {
-    const res = await fetch(`https://my-cors-proxy.vercel.app/https://api.freepik.com/v1/ai/text-to-image`, {
+    const res = await fetch(`https://your-deployed-cors-proxy.vercel.app/https://api.freepik.com/v1/ai/text-to-image`, {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
