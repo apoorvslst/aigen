@@ -13,18 +13,18 @@ function App() {
 
   const handleGenerate = async () => {
   try {
-    const res = await fetch('https://cors-anywhere.herokuapp.com/https://api.freepik.com/v1/ai/text-to-image', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-freepik-api-key': apikey
-      },
-      body: JSON.stringify({
-        prompt: prompt,
-        num_images: 1,
-        image: { size: "square_0.5_0.5" }
-      })
-    });
+    const res = await fetch(`https://my-cors-proxy.vercel.app/https://api.freepik.com/v1/ai/text-to-image`, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'x-freepik-api-key': apikey
+  },
+  body: JSON.stringify({
+    prompt: prompt,
+    num_images: 1,
+    image: { size: "square_0.5_0.5" }
+  })
+});
 
     if (!res.ok) {
       console.error("API error:", res.status, res.statusText);
